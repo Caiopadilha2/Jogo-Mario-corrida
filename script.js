@@ -26,11 +26,11 @@ window.onload = () => {
       if (player1Win) {
         alert('Player 1 wins')
         resetCars()
-        // audioWinner.play()
+        audioWinner.play()
       } else if (player2Win) {
         alert('Player 2 wins')
         resetCars()
-        // audioWinner.play()
+        audioWinner.play()
       }
     } else {
       alert('Você precisa selecionar os players.')
