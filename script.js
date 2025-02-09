@@ -76,8 +76,8 @@ window.onload = () => {
     player1.style.marginLeft = 0
     player2.style.marginLeft = 0
 
-    player1.style.backgroundImage = `url(./files/selectPlayer.png)`
-    player2.style.backgroundImage = `url(./files/selectPlayer.png)`
+    player1.style.backgroundImage = ''
+    player2.style.backgroundImage = ''
   }
 
   resetBtn.addEventListener('click', () => {
@@ -101,7 +101,6 @@ window.onload = () => {
       const playerSelected = document.querySelector('.selected')
 
       if (playerSelected) {
-        // console.log(event.target)
         playerSelected.style.backgroundImage = `url(${event.target.src})`
         playerSelected.classList.remove('selected')
       }
