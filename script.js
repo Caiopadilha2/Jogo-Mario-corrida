@@ -39,8 +39,15 @@ window.onload = () => {
       const player1Win = parseInt(player1.style.marginLeft) > window.innerWidth
       const player2Win = parseInt(player2.style.marginLeft) > window.innerWidth
 
-      if (player1Win) {
-        alert('Player 1 wins')
+      if (player1Win && player2Win) {
+        alert('Deu empate!')
+        resetCars()
+      } else if (player1Win) {
+        Swal.fire(
+          'Muito bem!',
+          `Sua oferta de venda no valor de R$${offerSale},00 foi enviada! 📈`,
+          'success'
+        )
         if (localStorage.getItem('scorePlayer1') === null) {
           localStorage.setItem('scorePlayer1', 1)
           p1Score.innerText = localStorage.getItem('scorePlayer1')
@@ -49,9 +56,8 @@ window.onload = () => {
           localStorage.setItem('scorePlayer1', (player1Score += 1))
           p1Score.innerText = localStorage.getItem('scorePlayer1')
         }
-
         resetCars()
-        // audioWinner.play()
+        audioWinner.play()
       } else if (player2Win) {
         alert('Player 2 wins')
         if (localStorage.getItem('scorePlayer2') === null) {
@@ -63,7 +69,7 @@ window.onload = () => {
           p2Score.innerText = localStorage.getItem('scorePlayer2')
         }
         resetCars()
-        // audioWinner.play()
+        audioWinner.play()
       }
     } else {
       alert('Você precisa selecionar os players.')
