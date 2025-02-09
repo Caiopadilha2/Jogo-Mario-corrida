@@ -8,6 +8,7 @@ window.onload = () => {
   const alternatives = document.getElementsByClassName('playersImages')
   const p1Score = document.getElementById('p1Score')
   const p2Score = document.getElementById('p2Score')
+  const randomButton = document.getElementById('random-players')
 
   player1.style.marginLeft = 0
   player2.style.marginLeft = 0
@@ -106,4 +107,18 @@ window.onload = () => {
       }
     })
   }
+
+  const personagensRandom = [
+    './files/yoshi.png',
+    './files/peach.png',
+    './files/mario.png',
+    './files/luigi.png'
+  ]
+
+  randomButton.addEventListener('click', event => {
+    const randomIndex = Math.floor(Math.random() * personagensRandom.length)
+    const randomIndex2 = Math.floor(Math.random() * personagensRandom.length)
+    cars[0].style.backgroundImage = `url(${personagensRandom[randomIndex]})`
+    cars[1].style.backgroundImage = `url(${personagensRandom[randomIndex2]})`
+  })
 }
