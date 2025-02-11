@@ -90,10 +90,12 @@ window.onload = () => {
   for (let index = 0; index < cars.length; index++) {
     cars[index].addEventListener('click', event => {
       const playerSelected = document.querySelector('.selected')
+
       if (playerSelected) {
+        // console.log(playerSelected)
+        event.target.style.backgroundImage = `url(${playerSelected.src})`
         playerSelected.classList.remove('selected')
       }
-      event.target.classList.add('selected')
     })
   }
 
@@ -102,9 +104,9 @@ window.onload = () => {
       const playerSelected = document.querySelector('.selected')
 
       if (playerSelected) {
-        playerSelected.style.backgroundImage = `url(${event.target.src})`
         playerSelected.classList.remove('selected')
       }
+      event.target.classList.add('selected')
     })
   }
 
