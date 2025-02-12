@@ -9,7 +9,8 @@ submit.addEventListener('click', event => {
       icon: 'success',
       title: 'Login realizado'
     }).then(() => {
-      window.location = 'http://127.0.0.1:5500/index2.html'
+      window.location =
+        'https://caiopadilha2.github.io/Jogo-Mario-corrida/index2.html'
     })
   } else {
     Swal.fire({
