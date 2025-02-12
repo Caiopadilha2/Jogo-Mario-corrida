@@ -114,16 +114,34 @@ window.onload = () => {
       event.target.classList.add('selected')
       // console.log(playerSelected?.alt)
 
-      if (playerSelected?.alt === 'Mario') {
+      // if (playerSelected?.alt === 'Mario') {
+      //   audioMario.play()
+      // }
+      // if (playerSelected?.alt === 'Luigi') {
+      //   audioLuigi.play()
+      // }
+      // if (playerSelected?.alt === 'Peach') {
+      //   audioPeach.play()
+      // }
+      // if (playerSelected?.alt === 'Yoshi') {
+      //   audioYoshi.play()
+      // }
+    })
+  }
+
+  for (let index = 0; index < alternatives.length; index += 1) {
+    alternatives[index].addEventListener('click', event => {
+      console.log(event.target.alt)
+      if (event.target.alt === 'Mario') {
         audioMario.play()
       }
-      if (playerSelected?.alt === 'Luigi') {
+      if (event.target.alt === 'Luigi') {
         audioLuigi.play()
       }
-      if (playerSelected?.alt === 'Peach') {
+      if (event.target.alt === 'Peach') {
         audioPeach.play()
       }
-      if (playerSelected?.alt === 'Yoshi') {
+      if (event.target.alt === 'Yoshi') {
         audioYoshi.play()
       }
     })
