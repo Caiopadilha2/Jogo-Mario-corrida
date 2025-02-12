@@ -44,6 +44,7 @@ window.onload = () => {
         alert('Deu empate!')
         resetCars()
       } else if (player1Win) {
+        alert('Player 1 ganhou!')
         const body = document.querySelector('body')
         const fireworks = new Fireworks.default(body, {})
         fireworks.start()
@@ -59,6 +60,8 @@ window.onload = () => {
         resetCars()
         audioWinner.play()
       } else if (player2Win) {
+        alert('Player 2 ganhou!')
+
         const body = document.querySelector('body')
         const fireworks = new Fireworks.default(body, {})
         fireworks.start()

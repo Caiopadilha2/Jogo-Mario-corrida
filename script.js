@@ -5,13 +5,8 @@ const botao = document.getElementById('botao')
 submit.addEventListener('click', event => {
   event.preventDefault()
   if (username.value === 'caio' && password.value === '123456') {
-    Swal.fire({
-      icon: 'success',
-      title: 'Login realizado'
-    }).then(() => {
-      window.location =
-        'https://caiopadilha2.github.io/Jogo-Mario-corrida/index2.html'
-    })
+    window.location =
+      'https://caiopadilha2.github.io/Jogo-Mario-corrida/index2.html'
   } else {
     Swal.fire({
       icon: 'error',
