@@ -112,6 +112,20 @@ window.onload = () => {
         playerSelected.classList.remove('selected')
       }
       event.target.classList.add('selected')
+      // console.log(playerSelected?.alt)
+
+      if (playerSelected?.alt === 'Mario') {
+        audioMario.play()
+      }
+      if (playerSelected?.alt === 'Luigi') {
+        audioLuigi.play()
+      }
+      if (playerSelected?.alt === 'Peach') {
+        audioPeach.play()
+      }
+      if (playerSelected?.alt === 'Yoshi') {
+        audioYoshi.play()
+      }
     })
   }
 
