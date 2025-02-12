@@ -13,104 +13,46 @@ body {
   overflow: hidden;
 }
 
-button {
-  margin-top: 10px;
-  width: 120px;
-  font-size: large;
-  color: #fff;
-  padding: 10px;
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#container div {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
   border-radius: 10px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
-.btn-go {
-  background-color: rgb(39, 164, 54);
+#container label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.2em;
 }
 
-.btn-reset {
-  background-color: rgb(255, 0, 0);
+#container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
 }
 
-.btn-aleatorio {
-  background-color: aqua;
-}
-
-.selectPlayer {
-  display: inline-block;
-  font-family: 'Luckiest Guy', cursive;
-  font-size: 40px;
-  margin-top: 5px;
+#container input[type='submit'] {
+  background-color: #007bff;
   color: white;
-  text-shadow: black 2px 2px 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
 }
 
-.car-section {
-  text-align: left;
-  position: absolute;
-  bottom: 105px;
-}
-
-.car-section div {
-  width: 150px;
-  height: 150px;
-  background-image: url(./files/selectPlayer.png);
-  background-size: cover;
-}
-
-.playersImages:hover {
-  width: 110px;
-  background-color: rgba(255, 225, 0, 0.8);
-  border: 8px outset red;
-  vertical-align: top;
-}
-
-.alternative-car1 {
-  background-image: url(./files/yoshi.png);
-}
-
-.alternative-car2 {
-  background-image: url(./files/peach.png);
-}
-
-.alternative-car3 {
-  background-image: url(./files/mario.png);
-}
-
-.alternative-car4 {
-  background-image: url(./files/luigi.png);
-}
-
-.alternatives {
-  margin-top: 20px;
-}
-
-.selected {
-  border: 8px outset red;
-  background-color: rgba(255, 174, 0, 0.5);
-}
-
-.small {
-  font-size: 20px;
-}
-
-h2 {
-  font-family: 'Luckiest Guy', cursive;
-  font-size: 40px;
-  margin-top: 20px;
-  color: white;
-  text-shadow: black 2px 2px 5px;
-}
-
-.scorePlayer {
-  display: inline-block;
-  font-family: 'Luckiest Guy', cursive;
-  font-size: 20px;
-
-  text-align: center;
-  color: white;
-  text-shadow: black 2px 2px 5px;
-}
-
-.scorePlayer p {
-  font-size: 35px;
-  margin-top: 10px;
+#container input[type='submit']:hover {
+  background-color: #0056b3;
 }

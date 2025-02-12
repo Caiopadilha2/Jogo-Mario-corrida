@@ -1,55 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mário Kart</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="shortcut icon"
-      href="./files/mario-icon.gif"
-      type="image/x-icon"
-    />
-    <audio id="audioWinner" src="./files/marioWinner.mp3"></audio>
   </head>
   <body>
-    <div class="selectPlayer">
-      <p>SELECT YOUR PLAYER:</p>
-      <p class="small">Escolha um personagem e clique na interrogação [?]</p>
-    </div>
-
-    <section id="players" class="alternatives">
-      <img src="files/mario.png" alt="Mario" class="playersImages" />
-      <img src="files/luigi.png" alt="Luigi" class="playersImages" />
-      <img src="files/peach.png" alt="Peach" class="playersImages" />
-      <img src="files/yoshi.png" alt="Yoshi" class="playersImages" />
-    </section>
-
-    <section>
-      <div class="scorePlayer">
-        Player 1:
-        <p id="p1Score"></p>
+    <form id="container">
+      <div>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required />
+        <input type="submit" value="Login" id="submit" />
+        <p>
+          Dica: <br />
+          Usuário: Caio - Senha: 123456
+        </p>
       </div>
-      <div class="scorePlayer">
-        Player 2:
-        <p id="p2Score"></p>
-      </div>
-    </section>
-
-    <button id="start-race-btn" class="btn-go">GO!</button>
-    <button id="reset-race-btn" class="btn-reset">RESET</button>
-    <button id="random-players" class="btn-aleatorio">ALEATÓRIO</button>
-
-    <section class="car-section">
-      <div id="player1" class="car"></div>
-      <div id="player2" class="car"></div>
-    </section>
+    </form>
   </body>
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </html>
