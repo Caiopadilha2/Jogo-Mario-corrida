@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "fireworks-js": "^2.10.8"
+    "fireworks-js": "^2.10.8",
+    "sweetalert2": "^11.16.0"
   }
 }

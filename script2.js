@@ -44,7 +44,9 @@ window.onload = () => {
         alert('Deu empate!')
         resetCars()
       } else if (player1Win) {
-        alert('Player 1 ganhou')
+        const body = document.querySelector('body')
+        const fireworks = new Fireworks.default(body, {})
+        fireworks.start()
 
         if (localStorage.getItem('scorePlayer1') === null) {
           localStorage.setItem('scorePlayer1', 1)
@@ -57,7 +59,9 @@ window.onload = () => {
         resetCars()
         audioWinner.play()
       } else if (player2Win) {
-        alert('Player 2 ganhou')
+        const body = document.querySelector('body')
+        const fireworks = new Fireworks.default(body, {})
+        fireworks.start()
         if (localStorage.getItem('scorePlayer2') === null) {
           localStorage.setItem('scorePlayer2', 1)
           p2Score.innerText = localStorage.getItem('scorePlayer2')
@@ -118,7 +122,7 @@ window.onload = () => {
     './files/luigi.png'
   ]
 
-  randomButton.addEventListener('click', event => {
+  randomButton.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * personagensRandom.length)
     const randomIndex2 = Math.floor(Math.random() * personagensRandom.length)
     cars[0].style.backgroundImage = `url(${personagensRandom[randomIndex]})`
