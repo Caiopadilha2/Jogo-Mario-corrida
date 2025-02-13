@@ -1,4 +1,7 @@
 window.onload = () => {
+  const body = document.querySelector('body')
+  const fireworks = new Fireworks.default(body, {})
+
   const startBtn = document.getElementById('start-race-btn')
   const resetBtn = document.getElementById('reset-race-btn')
   const player1 = document.getElementById('player1')
@@ -45,9 +48,9 @@ window.onload = () => {
         resetCars()
       } else if (player1Win) {
         alert('Player 1 ganhou!')
-        const body = document.querySelector('body')
-        const fireworks = new Fireworks.default(body, {})
-        fireworks.start()
+
+        fireworks.launch(40)
+        fireworkSound.play()
 
         if (localStorage.getItem('scorePlayer1') === null) {
           localStorage.setItem('scorePlayer1', 1)
@@ -62,9 +65,9 @@ window.onload = () => {
       } else if (player2Win) {
         alert('Player 2 ganhou!')
 
-        const body = document.querySelector('body')
-        const fireworks = new Fireworks.default(body, {})
-        fireworks.start()
+        fireworks.launch(40)
+        fireworkSound.play()
+
         if (localStorage.getItem('scorePlayer2') === null) {
           localStorage.setItem('scorePlayer2', 1)
           p2Score.innerText = localStorage.getItem('scorePlayer2')

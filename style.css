@@ -6,18 +6,16 @@
 
 body {
   background-image: url(./files/backgroundMario.jpeg);
-  background-position: bottom;
-  background-repeat: repeat-x;
   text-align: center;
   height: 100vh;
-  overflow: hidden;
 }
 
 #container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+
+  height: 100vh;
 }
 
 #container div {
@@ -55,4 +53,8 @@ body {
 
 #container input[type='submit']:hover {
   background-color: #0056b3;
+}
+
+::placeholder {
+  text-align: center;
 }
